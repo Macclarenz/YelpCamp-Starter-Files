@@ -1,0 +1,144 @@
+@use '../abstracts/'as abs;
+
+.lp-container {
+    @include abs.flex(center, center, column-reverse);
+    position: relative;
+
+    .lp-first-column {
+        @include abs.centerContainer(90%);
+        padding-block: 2em;
+    }
+
+    .lp-second-column {
+        margin-top: 6em;
+
+        .lp-camp-img {
+            display: block;
+            object-fit: cover;
+            min-height: 320px;
+            width: 100%;
+        }
+    }
+}
+
+.lp-first-column {
+    .lp-logo-container {
+        position: absolute;
+        top: 2.2em;
+    }
+    
+    .lp-text-container {
+        font-family: abs.$archivo;
+
+        & > *:not(:first-child) {
+            margin-top: .75em;
+        }
+
+        & > h1 {
+            color: abs.$header-text-color;
+            font-size: 32px;
+            font-weight: map-get(abs.$archivo-weight, extraBold);
+        }
+
+        li, p {
+            color: abs.$text-color;
+            font-size: 16px;
+        }
+
+        p {
+            line-height: 1.4;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .lp-check-list {
+
+            & > li:not(:first-child) {
+                margin-top: .5em;
+            }
+
+            & > li {
+                @include abs.flex(flex-start, center, row, nowrap, .75em);
+            }
+        }
+
+        .lp-view-campground-btn {
+            @include abs.resetInput();
+            background-color: abs.$cta-bg-color;
+            border-radius: abs.$border-radius;
+            color: abs.$cta-text-color;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: map-get(abs.$archivo-weight, semiBold);
+            margin-block: 1.5em 1.25em;
+            padding: 1em 1.5em;
+            position: relative;
+            transition: all 350ms ease-out;
+
+            &::before {
+                @include abs.lineHover(currentColor, calc(100% - .75em), 0, 10%, 10%, 80%);
+            }
+
+            &:hover::before {
+                transform: scale(1);
+            }
+        }
+
+        .lp-partnership-list {
+            @include abs.flex(flex-start, center, row);
+            li > img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .lp-first-column {
+        .lp-text-container {
+            & > h1 {
+                font-size: 54px;
+            }
+
+            p, li, .lp-view-campground-btn {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .lp-container {
+        @include abs.flex(space-between, stretch);
+        height: 100vh;
+
+        .lp-first-column {
+            flex: 2 1 55%;
+        }
+
+        .lp-second-column {
+            flex: 1 2 45%;
+            margin-top: 0;
+
+            .lp-camp-img {
+                height: 100vh;
+            }
+        }
+    }
+
+    .lp-first-column {
+        position: relative;
+        .lp-logo-container {
+            left: max(5em, 15%);
+        }
+
+        .lp-text-container {
+            @include abs.centerContainer(max(5em, 70%));
+            position: relative;
+            transform: translateY(-50%);
+            top: 50%
+        }
+    }
+}

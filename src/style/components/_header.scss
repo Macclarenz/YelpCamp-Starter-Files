@@ -1,0 +1,126 @@
+@use '../abstracts/'as abs;
+
+header {
+    @include abs.flex(space-between, center);
+    @include abs.centerContainer(90%);
+    position: relative;
+
+    .sp-logo-btn,
+    .sp-hamburger-btn {
+        @include abs.resetInput();
+        cursor: pointer;
+        padding-block: 3em;
+    }
+
+    .sp-hamburger-btn {
+        background-color: abs.$sp-secondary-bg-color;
+        border-radius: abs.$border-radius;
+        padding: .5em;
+    }
+
+    nav {
+        @include abs.transitionScale(top right, 300ms cubic-bezier(0.46, 0.96, 0.63, 0.99));
+        @include abs.flex(center, center, column, nowrap, .5em);
+        background-color: abs.$nav-bg-color;
+        border-radius: abs.$border-radius;
+        display: flex;
+        padding: 1.5em;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: min(100%, 500px);
+        z-index: 100;
+
+        &[open] {
+            transform: scale(1);
+
+            &>button {
+                opacity: 1;
+                transition-delay: 300ms;
+            }
+        }
+
+        &>button {
+            @include abs.resetInput();
+            @include abs.text(16px, map-get(abs.$archivo-weight, medium));
+            @include abs.transitionOpacity(300ms ease-in-out);
+            color: abs.$nav-text-color;
+            cursor: pointer;
+            font-family: abs.$archivo;
+            padding: 1em 1.5em;
+            position: relative;
+
+            &::before {
+                @include abs.lineHover(currentColor, calc(100% - .5em), 0, 10%, 10%, 80%);
+            }
+
+            &:hover::before {
+                transform: scale(1);
+            }
+        }
+
+        .nav-account {
+            background-color: abs.$nav-account-bg-color;
+            border-radius: abs.$border-radius;
+            color: abs.$nav-account-text-color;
+            margin-bottom: .5em;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        @include abs.centerContainer(85%);
+
+        nav {
+            @include abs.flex(flex-end, center, row);
+            background-color: transparent;
+            margin-left: 1em;
+            padding-block: 2.5em;
+            padding-inline: 0;
+            position: static;
+            transform: scale(1);
+            width: 100%;
+            transition: all 350ms ease-out;
+
+            &>button {
+                color: abs.$text-color;
+                opacity: 1;
+                position: relative;
+
+                &:not(.nav-account):hover {
+                    color: abs.$nav-account-text-color;
+                }
+
+                &:not(:last-child)::before {
+                    background-color: abs.$nav-account-text-color;
+                }
+            }
+            
+            &>button:nth-child(1) {
+                margin-right: auto;
+            }
+
+            .nav-login-username {
+                &[isLogged = true] {
+                    font-weight: map-get(abs.$archivo-weight, bold);
+                    padding-inline: .75em;
+                }
+            }
+
+            .nav-account {
+                background-color: abs.$nav-account-bg-color-2;
+                color: abs.$nav-account-text-color-2;
+                margin-bottom: 0;
+                margin-left: 1em;
+
+                &[isLogged=true] {
+                    background-color: transparent;
+                    color: abs.$text-color;
+                    margin-left: 0;
+                    padding-inline: .75em;
+                }
+            }
+        }
+    }
+}

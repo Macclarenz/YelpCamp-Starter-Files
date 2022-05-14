@@ -1,0 +1,15 @@
+footer {
+    margin: 0 auto;
+    width: 90%;
+
+    .footer-logo-link {
+        display: block;
+        margin-block: 4em;
+    }
+}
+
+@media (min-width: 1024px) {
+    footer {
+        width: 85%;
+    }
+}

@@ -1,0 +1,77 @@
+@mixin flex($justify, $align, $direction: row, $wrap: nowrap, $gap: 0, $flex: initial) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    gap: $gap;
+    flex: $flex;
+}
+
+@mixin grid($row, $column, $gap: 0) {
+    display: grid;
+    grid-template-rows: $row;
+    grid-template-columns: $column;
+    gap: $gap;
+}
+
+@mixin text($size: 16px, $weight, $align: left, $decoration: initial) {
+    font-size: $size;
+    font-weight: $weight;
+    text-align: $align;
+    text-decoration: $decoration;
+}
+
+@mixin textHover($color, $method: 'lighten', $amount: 50%) {
+    @if $method == 'darken' {
+        color: darken($color, $amount);
+    } @else {
+        color: lighten($color, $amount);
+    }
+}
+
+@mixin resetInput() {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+@mixin lineHover($color: currentColor, $top: calc(100% + 2px), $bottom: 0, $left: 0, $right: 0, $width: 100%) {
+    content: '';
+    position: absolute;
+    background-color: $color;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: all 250ms ease-out;
+    height: 2px;
+    width: $width;
+}
+
+@mixin ctaHover($bg-color, $amount: 50%, $color: currentColor) {
+    @if $amount == 0 {
+        background-color: $bg-color;
+        color: $color
+    } @else {
+        background-color: lighten($bg-color, $amount);
+    }
+}
+
+@mixin transitionScale($origin: top right, $durationFunction: 350ms ease-out) {
+    transform: scale(0);
+    transform-origin: $origin;
+    transition: all $durationFunction;
+}
+
+@mixin transitionOpacity($durationFunction) {
+    opacity: 0;
+    transition: all $durationFunction;
+}
+
+@mixin centerContainer($width: 90%) {
+    margin: 0 auto;
+    width: $width;
+}

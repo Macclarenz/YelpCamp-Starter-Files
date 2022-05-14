@@ -1,0 +1,54 @@
+@use '../../abstracts/' as abs; 
+
+:where(.individual-campground-text-container) h1, p, em {
+    font-family: abs.$archivo;
+}
+
+:where(.individual-campground-text-container) p, em {
+    color: abs.$text-color;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.individual-campground-detail-container {
+    & > img {
+        border-radius: abs.$border-radius;
+        max-height: 400px;
+        object-fit: cover;
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .individual-campground-text-container {
+        & > *:not(:first-child) {
+            margin-top: 1em;
+        }
+    }
+}
+
+.individual-campground-user-container {
+    @include abs.flex(space-between, center, row, nowrap);
+
+    & > h1 {
+        @include abs.text(18px, map-get(abs.$archivo-weight, extraBold));
+
+    }
+}
+
+@media (min-width: 768px) {
+    :where(.individual-campground-text-container) p, em {
+        font-size: 18px;
+    }
+
+    .individual-campground-user-container h1 {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .individual-campground-detail-container {
+        & > img {
+            max-height: 450px;
+        }
+    }
+}

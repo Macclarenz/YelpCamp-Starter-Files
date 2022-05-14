@@ -1,0 +1,1181 @@
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/style/style.scss ***!
+  \*************************************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap);
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/style/style.scss (1) ***!
+  \*****************************************************************************************************************************************************************************************/
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.lp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  gap: 0;
+  flex: initial;
+  position: relative;
+}
+.lp-container .lp-first-column {
+  margin: 0 auto;
+  width: 90%;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.lp-container .lp-second-column {
+  margin-top: 6em;
+}
+.lp-container .lp-second-column .lp-camp-img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 320px;
+  width: 100%;
+}
+
+.lp-first-column .lp-logo-container {
+  position: absolute;
+  top: 2.2em;
+}
+.lp-first-column .lp-text-container {
+  font-family: "Archivo", sans-serif;
+}
+.lp-first-column .lp-text-container > *:not(:first-child) {
+  margin-top: 0.75em;
+}
+.lp-first-column .lp-text-container > h1 {
+  color: hsl(0, 0%, 0%);
+  font-size: 32px;
+  font-weight: 800;
+}
+.lp-first-column .lp-text-container li, .lp-first-column .lp-text-container p {
+  color: hsl(26, 4%, 37%);
+  font-size: 16px;
+}
+.lp-first-column .lp-text-container p {
+  line-height: 1.4;
+}
+.lp-first-column .lp-text-container ul {
+  list-style: none;
+}
+.lp-first-column .lp-text-container .lp-check-list > li:not(:first-child) {
+  margin-top: 0.5em;
+}
+.lp-first-column .lp-text-container .lp-check-list > li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.75em;
+  flex: initial;
+}
+.lp-first-column .lp-text-container .lp-view-campground-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  background-color: hsl(0, 0%, 0%);
+  border-radius: 0.25em;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 1.25em;
+  padding: 1em 1.5em;
+  position: relative;
+  transition: all 350ms ease-out;
+}
+.lp-first-column .lp-text-container .lp-view-campground-btn::before {
+  content: "";
+  position: absolute;
+  background-color: currentColor;
+  top: calc(100% - 0.75em);
+  bottom: 0;
+  left: 10%;
+  right: 10%;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: all 250ms ease-out;
+  height: 2px;
+  width: 80%;
+}
+.lp-first-column .lp-text-container .lp-view-campground-btn:hover::before {
+  transform: scale(1);
+}
+.lp-first-column .lp-text-container .lp-partnership-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  flex: initial;
+}
+.lp-first-column .lp-text-container .lp-partnership-list li > img {
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .lp-first-column .lp-text-container > h1 {
+    font-size: 54px;
+  }
+  .lp-first-column .lp-text-container p, .lp-first-column .lp-text-container li, .lp-first-column .lp-text-container .lp-view-campground-btn {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1024px) {
+  .lp-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+    flex: initial;
+    height: 100vh;
+  }
+  .lp-container .lp-first-column {
+    flex: 2 1 55%;
+  }
+  .lp-container .lp-second-column {
+    flex: 1 2 45%;
+    margin-top: 0;
+  }
+  .lp-container .lp-second-column .lp-camp-img {
+    height: 100vh;
+  }
+
+  .lp-first-column {
+    position: relative;
+  }
+  .lp-first-column .lp-logo-container {
+    left: max(5em, 15%);
+  }
+  .lp-first-column .lp-text-container {
+    margin: 0 auto;
+    width: max(5em, 70%);
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+  }
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  flex: initial;
+  margin: 0 auto;
+  width: 90%;
+  position: relative;
+}
+header .sp-logo-btn,
+header .sp-hamburger-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+header .sp-hamburger-btn {
+  background-color: hsl(38, 40%, 96%);
+  border-radius: 0.25em;
+  padding: 0.5em;
+}
+header nav {
+  transform: scale(0);
+  transform-origin: top right;
+  transition: all 300ms cubic-bezier(0.46, 0.96, 0.63, 0.99);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0.5em;
+  flex: initial;
+  background-color: hsl(0, 0%, 0%);
+  border-radius: 0.25em;
+  display: flex;
+  padding: 1.5em;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: min(100%, 500px);
+  z-index: 100;
+}
+header nav[open] {
+  transform: scale(1);
+}
+header nav[open] > button {
+  opacity: 1;
+  transition-delay: 300ms;
+}
+header nav > button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  text-decoration: none;
+  text-decoration: initial;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+  color: white;
+  cursor: pointer;
+  font-family: "Archivo", sans-serif;
+  padding: 1em 1.5em;
+  position: relative;
+}
+header nav > button::before {
+  content: "";
+  position: absolute;
+  background-color: currentColor;
+  top: calc(100% - 0.5em);
+  bottom: 0;
+  left: 10%;
+  right: 10%;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: all 250ms ease-out;
+  height: 2px;
+  width: 80%;
+}
+header nav > button:hover::before {
+  transform: scale(1);
+}
+header nav .nav-account {
+  background-color: hsl(38, 40%, 96%);
+  border-radius: 0.25em;
+  color: hsl(0, 0%, 0%);
+  margin-bottom: 0.5em;
+}
+
+@media (min-width: 1024px) {
+  header {
+    margin: 0 auto;
+    width: 85%;
+  }
+  header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+    flex: initial;
+    background-color: transparent;
+    margin-left: 1em;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    padding-left: 0;
+    padding-right: 0;
+    position: static;
+    transform: scale(1);
+    width: 100%;
+    transition: all 350ms ease-out;
+  }
+  header nav > button {
+    color: hsl(26, 4%, 37%);
+    opacity: 1;
+    position: relative;
+  }
+  header nav > button:not(.nav-account):hover {
+    color: hsl(0, 0%, 0%);
+  }
+  header nav > button:not(:last-child)::before {
+    background-color: hsl(0, 0%, 0%);
+  }
+  header nav > button:nth-child(1) {
+    margin-right: auto;
+  }
+  header nav .nav-login-username[isLogged=true] {
+    font-weight: 700;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+  }
+  header nav .nav-account {
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(38, 40%, 96%);
+    margin-bottom: 0;
+    margin-left: 1em;
+  }
+  header nav .nav-account[isLogged=true] {
+    background-color: transparent;
+    color: hsl(26, 4%, 37%);
+    margin-left: 0;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+  }
+}
+.search-form-container {
+  margin: 0 auto;
+  width: 90%;
+  background-color: hsl(38, 40%, 96%);
+  border-radius: 0.25em;
+  font-family: "Archivo", sans-serif;
+  padding: 2em;
+}
+.search-form-container > *:not(:first-child) {
+  margin-top: 1em;
+}
+.search-form-container > h1 {
+  font-size: 32px;
+  font-weight: 800;
+  text-align: left;
+  text-decoration: none;
+  text-decoration: initial;
+}
+.search-form-container > p {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  text-decoration: none;
+  text-decoration: initial;
+  color: hsl(26, 4%, 37%);
+  line-height: 1.4;
+}
+.search-form-container input,
+.search-form-container button {
+  font-size: 16px;
+}
+.search-form-container .search-form > *:not(:first-child) {
+  margin-top: 1em;
+}
+.search-form-container .search-form input[type=submit],
+.search-form-container .search-form input[type=search] {
+  border-radius: 0.25em;
+  font-family: "Archivo", sans-serif;
+  padding: 1.25em 2em;
+  width: 100%;
+}
+.search-form-container .search-form input[type=submit]::-moz-placeholder, .search-form-container .search-form input[type=search]::-moz-placeholder {
+  font-family: "Archivo", sans-serif;
+  font-weight: 500;
+  color: hsl(0, 0%, 33%);
+}
+.search-form-container .search-form input[type=submit]:-ms-input-placeholder, .search-form-container .search-form input[type=search]:-ms-input-placeholder {
+  font-family: "Archivo", sans-serif;
+  font-weight: 500;
+  color: hsl(0, 0%, 33%);
+}
+.search-form-container .search-form input[type=submit]::placeholder,
+.search-form-container .search-form input[type=search]::placeholder {
+  font-family: "Archivo", sans-serif;
+  font-weight: 500;
+  color: hsl(0, 0%, 33%);
+}
+.search-form-container .search-form .input-text-container {
+  position: relative;
+}
+.search-form-container .search-form .input-text-container .search-icon {
+  position: absolute;
+  top: 1.25em;
+  left: 1.25em;
+}
+.search-form-container .search-form .input-text-container .search-icon path {
+  fill: hsl(0, 0%, 33%);
+}
+.search-form-container .search-form .input-text-container input[type=search] {
+  border: 1px solid hsl(60, 2%, 81%);
+  padding-left: 3em;
+}
+.search-form-container .search-form input[type=submit] {
+  background-color: hsl(0, 0%, 0%);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: all 350ms ease;
+}
+.search-form-container .search-form input[type=submit]:hover {
+  background-color: gray;
+}
+.search-form-container .search-add-campground-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  text-align: initial;
+  text-decoration: underline;
+  color: hsl(26, 4%, 37%);
+  cursor: pointer;
+  transition: all 350ms ease;
+}
+.search-form-container .search-add-campground-btn:hover {
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .search-form-container {
+    padding: 4em;
+  }
+  .search-form-container > * {
+    max-width: 420px;
+  }
+  .search-form-container > h1 {
+    font-size: 36px;
+    font-weight: 800;
+    text-align: left;
+    text-decoration: none;
+    text-decoration: initial;
+  }
+  .search-form-container > p {
+    font-size: 18px;
+  }
+  .search-form-container input,
+.search-form-container button {
+    font-size: 18px;
+  }
+  .search-form-container .search-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1em;
+    flex: initial;
+    max-width: 400px;
+  }
+  .search-form-container .search-form > *:not(:first-child) {
+    margin-top: 0;
+  }
+  .search-form-container .search-form .input-text-container {
+    flex: 2 1 70%;
+  }
+  .search-form-container .search-form input[type=submit] {
+    flex: 1 2 30%;
+  }
+  .search-form-container .search-add-campground-btn {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    text-align: initial;
+    text-decoration: underline;
+  }
+}
+@media (min-width: 1024px) {
+  .search-form-container {
+    width: 85%;
+  }
+}
+.campground-container {
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 2em;
+}
+
+.campground-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  flex: initial;
+  list-style: none;
+  font-family: "Archivo", sans-serif;
+  min-height: 500px;
+}
+.campground-list > li {
+  border: 1px solid hsl(60, 2%, 81%);
+  border-radius: 0.25em;
+  padding: 1em;
+  max-width: 350px;
+}
+.campground-list > li > img {
+  border-radius: 0.25em;
+  display: block;
+  max-width: 100%;
+  margin-bottom: 1em;
+}
+
+.campground-text-container > *:not(:first-child) {
+  margin-top: 0.5em;
+}
+.campground-text-container > h2 {
+  font-size: 18px;
+  font-weight: 800;
+  text-align: left;
+  text-decoration: none;
+  text-decoration: initial;
+}
+.campground-text-container > P {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  text-decoration: none;
+  text-decoration: initial;
+  color: hsl(26, 4%, 37%);
+  line-height: 1.4;
+}
+.campground-text-container .view-campground-btn {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-decoration: initial;
+  background-color: transparent;
+  border: 1px solid hsl(60, 2%, 81%);
+  border-radius: 0.25em;
+  cursor: pointer;
+  padding: 1em 1.5em;
+  width: 100%;
+  transition: all 350ms ease-out;
+}
+.campground-text-container .view-campground-btn:hover {
+  background-color: hsl(0, 0%, 0%);
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .campground-text-container > h2 {
+    font-size: 18px;
+    font-weight: 800;
+    text-align: left;
+    text-decoration: none;
+    text-decoration: initial;
+  }
+  .campground-text-container > P {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    text-decoration: none;
+    text-decoration: initial;
+  }
+  .campground-text-container .view-campground-btn {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-decoration: initial;
+  }
+}
+@media (min-width: 1024px) {
+  .campground-container {
+    width: 85%;
+  }
+}
+.add-campground-container {
+  margin: 0 auto;
+  width: min(90%, 550px);
+}
+.add-campground-container > h1 {
+  font-size: 36px;
+  font-weight: 800;
+  text-align: left;
+  text-decoration: none;
+  text-decoration: initial;
+  font-family: "Archivo", sans-serif;
+  margin-bottom: 1em;
+}
+
+.add-campground-form {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1em;
+  flex: initial;
+}
+.add-campground-form label,
+.add-campground-form input,
+.add-campground-form textarea {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+}
+.add-campground-form label,
+.add-campground-form input:not([type=submit]),
+.add-campground-form textarea {
+  color: hsl(26, 4%, 37%);
+}
+.add-campground-form input,
+.add-campground-form textarea {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 0.25em;
+  padding: 1.25em;
+}
+.add-campground-form input:not([type=submit]),
+.add-campground-form textarea {
+  background-color: hsl(0, 0%, 97%);
+  line-height: 1.4;
+}
+.add-campground-form textarea {
+  height: 230px;
+}
+.add-campground-form input[type=submit] {
+  background-color: hsl(0, 0%, 0%);
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 350ms ease-out;
+}
+.add-campground-form input[type=submit]:hover {
+  background-color: gray;
+}
+
+@media (min-width: 768px) {
+  .add-campground-container {
+    margin-left: 5%;
+  }
+
+  .add-campground-form label,
+.add-campground-form input,
+.add-campground-form textarea {
+    font-family: "Archivo", sans-serif;
+    font-size: 18px;
+  }
+}
+@media (min-width: 1024px) {
+  .add-campground-container {
+    margin-left: auto;
+    margin-top: 1em;
+  }
+}
+footer {
+  margin: 0 auto;
+  width: 90%;
+}
+footer .footer-logo-link {
+  display: block;
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+@media (min-width: 1024px) {
+  footer {
+    width: 85%;
+  }
+}
+:where(.individual-campground-text-container) h1, p, em {
+  font-family: "Archivo", sans-serif;
+}
+
+:where(.individual-campground-text-container) p, em {
+  color: hsl(26, 4%, 37%);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.individual-campground-detail-container > img {
+  border-radius: 0.25em;
+  max-height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  margin-bottom: 1em;
+}
+.individual-campground-detail-container .individual-campground-text-container > *:not(:first-child) {
+  margin-top: 1em;
+}
+
+.individual-campground-user-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  flex: initial;
+}
+.individual-campground-user-container > h1 {
+  font-size: 18px;
+  font-weight: 800;
+  text-align: left;
+  text-decoration: none;
+  text-decoration: initial;
+}
+
+@media (min-width: 768px) {
+  :where(.individual-campground-text-container) p, em {
+    font-size: 18px;
+  }
+
+  .individual-campground-user-container h1 {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  .individual-campground-detail-container > img {
+    max-height: 450px;
+  }
+}
+:where(.individual-campground-comment-container) h2, p, button {
+  font-family: "Archivo", sans-serif;
+}
+
+:where(.individual-campground-comment-container) p, button {
+  font-size: 16px;
+}
+
+:where(.individual-campground-comment-list) p {
+  color: hsl(26, 4%, 37%);
+  line-height: 1.5;
+}
+
+:where(.comment-user-container) h2 {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.individual-campground-comment-list {
+  list-style: none;
+}
+.individual-campground-comment-list > *:not(:first-child) {
+  margin-top: 1.5em;
+}
+.individual-campground-comment-list > li {
+  border-bottom: 1px solid hsl(60, 2%, 81%);
+  padding-bottom: 1.5em;
+}
+.individual-campground-comment-list .comment-user-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  flex: initial;
+  margin-bottom: 1em;
+}
+.individual-campground-comment-list .comment-user-container > p {
+  font-size: 14px;
+}
+
+.individual-campground-comment-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.5em;
+  flex: initial;
+  background-color: hsl(0, 0%, 0%);
+  border: 1px solid hsl(60, 2%, 81%);
+  border-radius: 0.25em;
+  color: white;
+  cursor: pointer;
+  margin-top: 1.5em;
+  padding: 1em 1.5em;
+  transition: all 350ms ease-out;
+}
+.individual-campground-comment-btn .chat-bubble {
+  max-width: 100%;
+}
+.individual-campground-comment-btn:hover {
+  background-color: gray;
+}
+
+@media (min-width: 768px) {
+  :where(.individual-campground-comment-container) p, button {
+    font-size: 18px;
+  }
+
+  .individual-campground-comment-list .comment-user-container > p {
+    font-size: 16px;
+  }
+}
+.individual-campground-map-container {
+  width: 100%;
+}
+.individual-campground-map-container > img {
+  margin: 0 auto;
+  width: min(100%, 400px);
+  border-radius: 0.25em;
+  display: block;
+  max-height: 380px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.individual-campground-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 2em;
+  flex: initial;
+  margin: 0 auto;
+  width: 90%;
+}
+.individual-campground-container > * {
+  border: 1px solid hsl(60, 2%, 81%);
+  border-radius: 0.25em;
+  padding: 2em;
+}
+
+@media (min-width: 1024px) {
+  .individual-campground-container {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: minmax(360px, 1fr) auto;
+    grid-gap: 2.5em;
+    gap: 2.5em;
+    align-items: start;
+    grid-template-areas: "map detail" "map comment";
+    width: 85%;
+  }
+  .individual-campground-container .individual-campground-detail-container {
+    grid-area: detail;
+  }
+  .individual-campground-container .individual-campground-comment-container {
+    grid-area: comment;
+  }
+  .individual-campground-container .individual-campground-map-container {
+    grid-area: map;
+  }
+}
+.sign-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  flex: initial;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+}
+.sign-header .sign-logo-link,
+.sign-header .sign-back-to-campground-link {
+  cursor: pointer;
+}
+.sign-header .sign-back-to-campground-link {
+  color: hsl(26, 4%, 37%);
+  position: relative;
+}
+.sign-header .sign-back-to-campground-link::before {
+  content: "";
+  position: absolute;
+  background-color: currentColor;
+  top: calc(100% + 2px);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: all 250ms ease-out;
+  height: 2px;
+  width: 100%;
+  transform-origin: right;
+}
+.sign-header .sign-back-to-campground-link:hover::before {
+  transform: scale(1);
+}
+
+@media (min-width: 1024px) {
+  .sign-header {
+    width: 70%;
+  }
+}
+.sign-form-container > h1 {
+  font-size: 36px;
+  font-weight: 800;
+  text-align: left;
+  text-decoration: none;
+  text-decoration: initial;
+  margin-bottom: 1.25em;
+}
+
+.sign-form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1.25em;
+  flex: initial;
+}
+.sign-form input,
+.sign-form label {
+  font-size: 16px;
+}
+.sign-form label {
+  color: hsl(26, 4%, 37%);
+}
+.sign-form > input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 0.25em;
+  padding: 1em 1.5em;
+  width: 100%;
+}
+.sign-form > input:not([type=submit]) {
+  background-color: hsl(0, 0%, 97%);
+}
+.sign-form > input[type=submit] {
+  background-color: hsl(0, 0%, 0%);
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 350ms ease-out;
+}
+.sign-form > input[type=submit]:hover {
+  background-color: gray;
+}
+
+@media (min-width: 768px) {
+  .sign-form input,
+.sign-form label {
+    font-size: 18px;
+  }
+}
+.testimony-container {
+  margin: 0 auto;
+  width: 90%;
+  font-family: "Archivo", sans-serif;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+.testimony-container > *:not(:first-child) {
+  margin-top: 1em;
+}
+.testimony-container q {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+.testimony-container .testimony-user-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.75em;
+  flex: initial;
+}
+.testimony-container .testimony-user-container .testimony-user-img {
+  max-width: 100%;
+}
+.testimony-container .testimony-user-container .testimony-user-text-container {
+  font-size: 14px;
+}
+.testimony-container .testimony-user-container .testimony-user-text-container .testimony-user-name {
+  font-weight: 800;
+}
+.testimony-container .testimony-user-container .testimony-user-text-container .testimony-profession {
+  color: hsl(26, 4%, 37%);
+  margin-top: 0.25em;
+}
+
+@media (min-width: 768px) {
+  .testimony-container q {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  .testimony-container {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 50%;
+  }
+}
+.sign-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
+  flex: initial;
+  min-height: 100vh;
+}
+
+.sign-first-column {
+  margin: 0 auto;
+  width: 90%;
+  font-family: "Archivo", sans-serif;
+}
+.sign-first-column > h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 1em;
+}
+.sign-first-column .sign-form-container > p {
+  color: hsl(26, 4%, 37%);
+  margin-top: 1em;
+  margin-bottom: 2.5em;
+}
+.sign-first-column .sign-form-container > p a {
+  color: hsl(197, 71%, 44%);
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: underline;
+  transition: all 350ms ease;
+}
+.sign-first-column .sign-form-container > p a:hover {
+  color: #0a2f3d;
+}
+.sign-first-column *::-moz-placeholder {
+  font-family: "Archivo", sans-serif;
+}
+.sign-first-column *:-ms-input-placeholder {
+  font-family: "Archivo", sans-serif;
+}
+.sign-first-column *::placeholder {
+  font-family: "Archivo", sans-serif;
+}
+
+.sign-second-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
+  flex: initial;
+  background-color: hsl(38, 40%, 96%);
+  height: 100%;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .sign-first-column > h1 {
+    font-size: 35px;
+  }
+  .sign-first-column .sign-form-container > p {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1024px) {
+  .sign-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+    flex: initial;
+  }
+
+  .sign-first-column {
+    flex: 2 1 55%;
+    position: relative;
+  }
+  .sign-first-column .sign-form-container {
+    margin: 0 auto;
+    width: 70%;
+    position: absolute;
+    transform: translate(50%, -50%);
+    top: 50%;
+    right: 50%;
+  }
+  .sign-first-column .sign-form-container > p {
+    margin-bottom: 0;
+  }
+
+  .sign-second-column {
+    flex: 1 2 45%;
+    padding: 10%;
+    min-height: 100vh;
+  }
+}
+.add-comment-container {
+  margin: 0 auto;
+  width: min(90%, 550px);
+}
+.add-comment-container > h1 {
+  font-size: 32px;
+  font-weight: 800;
+  text-align: left;
+  text-decoration: none;
+  text-decoration: initial;
+  font-family: "Archivo", sans-serif;
+  margin-bottom: 1em;
+}
+
+.add-comment-form {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1em;
+  flex: initial;
+}
+.add-comment-form label,
+.add-comment-form input,
+.add-comment-form textarea {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.add-comment-form label,
+.add-comment-form input:not([type=submit]),
+.add-comment-form textarea {
+  color: hsl(26, 4%, 37%);
+}
+.add-comment-form input,
+.add-comment-form textarea {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 0.25em;
+  padding: 1.25em;
+}
+.add-comment-form textarea {
+  background-color: hsl(0, 0%, 97%);
+}
+.add-comment-form input[type=submit] {
+  background-color: hsl(0, 0%, 0%);
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 1em;
+  transition: all 350ms ease-out;
+}
+.add-comment-form input[type=submit]:hover {
+  background-color: gray;
+}
+
+@media (min-width: 768px) {
+  .add-comment-container {
+    margin-left: 5%;
+  }
+
+  .add-comment-form label,
+.add-comment-form input,
+.add-comment-form textarea {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1024px) {
+  .add-comment-container {
+    margin-left: auto;
+    margin-top: 1em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map*/

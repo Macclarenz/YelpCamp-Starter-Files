@@ -1,0 +1,143 @@
+@use '../../abstracts/'as abs;
+// @use './searchForm';
+
+.search-form-container {
+    @include abs.centerContainer(90%);
+    background-color: abs.$sp-secondary-bg-color;
+    border-radius: abs.$border-radius;
+    font-family: abs.$archivo;
+    padding: 2em;
+
+    &>*:not(:first-child) {
+        margin-top: 1em;
+    }
+
+    &>h1 {
+        @include abs.text(32px, map-get(abs.$archivo-weight, extraBold));
+    }
+
+    &>p {
+        @include abs.text(16px, map-get(abs.$archivo-weight, medium));
+        color: abs.$text-color;
+        line-height: 1.4;
+    }
+
+    input,
+    button {
+        font-size: 16px;
+    }
+
+    .search-form {
+
+        & > *:not(:first-child) {
+            margin-top: 1em;
+        }
+
+        input[type=submit],
+        input[type=search] {
+            border-radius: abs.$border-radius;
+            font-family: abs.$archivo;
+            padding: 1.25em 2em;
+            width: 100%;
+
+            &::placeholder {
+                font-family: abs.$archivo;
+                font-weight: map-get(abs.$archivo-weight, medium);
+                color: abs.$sp-search-icon-color;
+            }
+        }
+
+        .input-text-container {
+            position: relative;
+
+            .search-icon {
+                position: absolute;
+                top: 1.25em;
+                left: 1.25em;
+
+                path {
+                    fill: abs.$sp-search-icon-color;
+                }
+            }
+
+            input[type=search] {
+                border: 1px solid abs.$border-color;
+                padding-left: 3em;
+            }  
+        }
+
+        input[type=submit] {
+            background-color: abs.$cta-bg-color;
+            border: none;
+            color: abs.$cta-text-color;
+            cursor: pointer;
+            transition: all 350ms ease;
+
+            &:hover {
+                @include abs.ctaHover(abs.$cta-bg-color)
+            }
+        }
+    }
+
+    .search-add-campground-btn {
+        @include abs.resetInput();
+        @include abs.text(16px, map-get(abs.$archivo-weight, medium), initial, underline);
+        color: abs.$text-color;
+        cursor: pointer;
+        transition: all 350ms ease;
+
+        &:hover {
+            @include abs.textHover(abs.$text-color, 'darken');
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .search-form-container {
+        padding: 4em;
+        
+        & > * {
+            max-width: 420px;
+        }
+
+        &>h1 {
+            @include abs.text(36px, map-get(abs.$archivo-weight, extraBold));
+        }
+    
+        &>p {
+            font-size: 18px;
+        }
+    
+        input,
+        button {
+            font-size: 18px;
+        }
+
+        .search-form {
+            @include abs.flex(space-between, center, row, nowrap, 1em);
+            max-width: 400px;
+
+            & > *:not(:first-child) {
+                margin-top: 0;
+            }
+
+            .input-text-container {
+                flex: 2 1 70%;
+            }
+
+            input[type=submit] {
+                flex: 1 2 30%;
+            }
+        }
+
+        .search-add-campground-btn {
+            @include abs.text(18px, map-get(abs.$archivo-weight, medium), initial, underline);
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .search-form-container {
+        width: 85%;
+    }
+}

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap');
+$archivo: 'Archivo', sans-serif;
+$archivo-weight: (
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semiBold: 600,
+    bold: 700,
+    extraBold: 800,
+    blackWeight: 900
+);
+
+$bg-color: hsl(38, 40%, 96%);
+$cta-bg-color: hsl(0, 0%, 0%);
+$cta-text-color: white;
+$header-text-color: hsl(0, 0%, 0%);
+$text-color: hsl(26, 4%, 37%);
+
+// Border
+$border-color: hsl(60, 2%, 81%);
+$border-radius: .25em;
+$testimony-bg-color: hsl(38, 40%, 96%);
+
+// Sign in or up 
+$sign-link-color: hsl(197, 71%, 44%);
+$sign-bg-color: hsl(0, 0%, 97%);
+
+// Navbar
+$nav-bg-color: $cta-bg-color;
+$nav-text-color: $cta-text-color;
+$nav-account-bg-color: $bg-color;
+$nav-account-text-color: $cta-bg-color;
+$nav-account-bg-color-2: $cta-bg-color;
+$nav-account-text-color-2: $bg-color;
+
+// Search page
+$sp-secondary-bg-color: $testimony-bg-color;
+$sp-search-icon-color: hsl(0, 0%, 33%);
+
+// Add new campground
+$anc-input-bg-color: $sign-bg-color;
+
+// Add new comment 
+$ac-input-bg-color: $sign-bg-color;

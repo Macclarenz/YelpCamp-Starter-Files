@@ -1,0 +1,12 @@
+@use '../../abstracts/' as abs;
+
+.individual-campground-map-container {
+    width: 100%;
+    & > img {
+        @include abs.centerContainer(min(100%, 400px));
+        border-radius: abs.$border-radius;
+        display: block;
+        max-height: 380px;
+        object-fit: cover;
+    }
+}

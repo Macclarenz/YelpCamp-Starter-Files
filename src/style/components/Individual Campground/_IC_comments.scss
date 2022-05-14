@@ -1,0 +1,76 @@
+@use '../../abstracts/'as abs;
+
+:where(.individual-campground-comment-container) h2, p, button {
+    font-family: abs.$archivo;
+}
+
+:where(.individual-campground-comment-container) p, button {
+    font-size: 16px;
+}
+
+:where(.individual-campground-comment-list) p {
+    color: abs.$text-color;
+    line-height: 1.5;
+}
+
+:where(.comment-user-container) h2 {
+    font-size: 18px;
+    font-weight: map-get(abs.$archivo-weight, extraBold);
+}
+
+.individual-campground-comment-list {
+    list-style: none;
+
+    & > *:not(:first-child) {
+        margin-top: 1.5em;
+    }
+
+    & > li {
+        border-bottom: 1px solid abs.$border-color;
+        padding-bottom: 1.5em;
+    }
+
+    .comment-user-container {
+        @include abs.flex(space-between, center, row, nowrap);
+        margin-bottom: 1em;
+
+        & > p {
+            font-size: 14px;
+        }
+    }
+}
+
+.individual-campground-comment-btn {
+    @include abs.resetInput();
+    @include abs.flex(center, center, row, nowrap, .5em);
+    background-color: abs.$cta-bg-color;
+    border: 1px solid abs.$border-color;
+    border-radius: abs.$border-radius;
+    color: abs.$cta-text-color;
+    cursor: pointer;
+    margin-top: 1.5em;
+    padding: 1em 1.5em;
+    transition: all 350ms ease-out;
+
+    .chat-bubble {
+        max-width: 100%;
+    }
+
+    &:hover {
+        @include abs.ctaHover(abs.$cta-bg-color);
+    }
+}
+
+@media (min-width: 768px) {
+    :where(.individual-campground-comment-container) p, button {
+        font-size: 18px;
+    }
+    
+    .individual-campground-comment-list {
+        .comment-user-container {
+            & > p {
+                font-size: 16px;
+            }
+        }
+    }
+}

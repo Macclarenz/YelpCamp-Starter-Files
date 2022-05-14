@@ -1,0 +1,74 @@
+@use '../abstracts/'as abs;
+
+.add-comment-container {
+    @include abs.centerContainer(min(90%, 550px));
+
+    &>h1 {
+        @include abs.text(32px, map-get(abs.$archivo-weight, extraBold));
+        font-family: abs.$archivo;
+        margin-bottom: 1em;
+    }
+}
+
+.add-comment-form {
+    @include abs.flex(center, stretch, column, nowrap, 1em);
+
+    label,
+    input,
+    textarea {
+        font-family: abs.$archivo;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    label,
+    input:not([type=submit]),
+    textarea {
+        color: abs.$text-color;
+    }
+
+    input,
+    textarea {
+        @include abs.resetInput();
+        border-radius: abs.$border-radius;
+        padding: 1.25em;
+    }
+
+    textarea {
+        background-color: abs.$ac-input-bg-color;
+    }
+
+    input[type=submit] {
+        background-color: abs.$cta-bg-color;
+        color: abs.$cta-text-color;
+        cursor: pointer;
+        font-weight: map-get(abs.$archivo-weight, bold);
+        padding: 1em;
+        transition: all 350ms ease-out;
+
+        &:hover {
+            @include abs.ctaHover(abs.$cta-bg-color);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .add-comment-container {
+        margin-left: 5%;
+    }
+
+    .add-comment-form {
+        label,
+        input,
+        textarea {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .add-comment-container {
+        margin-left: auto;
+        margin-top: 1em;
+    }
+}

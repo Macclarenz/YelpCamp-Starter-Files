@@ -1,0 +1,39 @@
+@forward './IC_detail';
+@forward './IC_comments';
+@forward './IC_map';
+
+@use '../../abstracts/'as abs;
+
+.individual-campground-container {
+    @include abs.flex(center, center, column, nowrap, 2em);
+    @include abs.centerContainer(90%);
+
+    & > * {
+        border: 1px solid abs.$border-color;
+        border-radius: abs.$border-radius;
+        padding: 2em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .individual-campground-container {
+        @include abs.grid(auto auto, minmax(360px, 1fr) auto, 2.5em);
+        align-items: start;
+        grid-template-areas: 
+        'map detail'
+        'map comment';
+        width: 85%;
+
+        .individual-campground-detail-container {
+            grid-area: detail;
+        }
+
+        .individual-campground-comment-container {
+           grid-area: comment;
+        }
+
+        .individual-campground-map-container {
+           grid-area: map;
+        }
+    }
+}

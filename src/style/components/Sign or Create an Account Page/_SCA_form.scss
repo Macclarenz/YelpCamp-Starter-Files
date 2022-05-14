@@ -1,0 +1,53 @@
+@use '../../abstracts/'as abs;
+
+.sign-form-container{
+    & > h1 {
+        @include abs.text(36px, map-get(abs.$archivo-weight, extraBold));
+         margin-bottom: 1.25em;
+    }
+}
+
+.sign-form {
+    @include abs.flex(center, flex-start, column, nowrap, 1.25em);
+
+    input,
+    label {
+        font-size: 16px;
+    }
+
+    label {
+        color: abs.$text-color;
+    }
+
+    &>input {
+        @include abs.resetInput();
+        border-radius: abs.$border-radius;
+        padding: 1em 1.5em;
+        width: 100%;
+    }
+
+    &>input:not([type=submit]) {
+        background-color: abs.$sign-bg-color;
+    }
+
+    &>input[type=submit] {
+        background-color: abs.$cta-bg-color;
+        color: abs.$cta-text-color;
+        cursor: pointer;
+        font-weight: map-get(abs.$archivo-weight, semiBold);
+        transition: all 350ms ease-out;
+        
+        &:hover {
+            @include abs.ctaHover(abs.$cta-bg-color);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .sign-form {
+        input,
+        label {
+            font-size: 18px;
+        }
+    }
+}

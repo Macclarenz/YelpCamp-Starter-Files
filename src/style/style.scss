@@ -1,0 +1,24 @@
+// Body / ::root 
+@use './components/body';
+
+// Landing Page
+@use './components/landingPage';
+
+// Header
+@use './components/header';
+
+// Main
+@use './components/Search\ Page/searchIndex';
+@use './components/addNewCampground';
+
+// Footer
+@use './components/footer';
+
+// Individual Campground
+@use './components/Individual Campground/IC_index';
+
+// Sign-in / Create an account
+@use './components/Sign or Create an Account Page/SCA_index';
+
+// Add new comment
+@use './components/addNewComment';

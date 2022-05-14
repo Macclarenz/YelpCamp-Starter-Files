@@ -1,0 +1,80 @@
+@use '../../abstracts/'as abs;
+
+.campground-container {
+    @include abs.centerContainer(90%);
+    margin-top: 2em;
+}
+
+.campground-list {
+    @include abs.flex(space-evenly, flex-start, row, wrap, 1em);
+    list-style: none;
+    font-family: abs.$archivo;
+    min-height: 500px;
+
+    & > li {
+        border: 1px solid abs.$border-color;
+        border-radius: abs.$border-radius;
+        padding: 1em;
+        max-width: 350px;
+
+        & > img {
+            border-radius: abs.$border-radius;
+            display: block;
+            max-width: 100%;
+            margin-bottom: 1em;
+        }
+    }
+}
+
+.campground-text-container {
+    & > *:not(:first-child) {
+        margin-top: .5em;
+    }
+
+    & > h2 {
+        @include abs.text(18px, map-get(abs.$archivo-weight, extraBold));
+    }
+
+    & > P {
+        @include abs.text(16px, map-get(abs.$archivo-weight, medium));
+        color: abs.$text-color;
+        line-height: 1.4;
+    }
+
+    .view-campground-btn {
+        @include abs.text(16px, map-get(abs.$archivo-weight, bold), center);
+        background-color: transparent;
+        border: 1px solid abs.$border-color;
+        border-radius: abs.$border-radius;
+        cursor: pointer;
+        padding: 1em 1.5em;
+        width: 100%;
+        transition: all 350ms ease-out;
+
+        &:hover {
+            @include abs.ctaHover(abs.$cta-bg-color, 0, abs.$cta-text-color);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .campground-text-container {
+        & > h2 {
+            @include abs.text(18px, map-get(abs.$archivo-weight, extraBold));
+        }
+    
+        & > P {
+            @include abs.text(18px, map-get(abs.$archivo-weight, medium));
+        }
+    
+        .view-campground-btn {
+            @include abs.text(18px, map-get(abs.$archivo-weight, bold), center);
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .campground-container {
+        width: 85%;
+    }
+}

@@ -1,0 +1,90 @@
+@forward './SCA_header';
+@forward './SCA_form';
+@forward './SCA_testimonial';
+
+@use '../../abstracts/'as abs;
+
+.sign-container {
+    @include abs.flex(center, stretch, column);
+    min-height: 100vh;
+}
+
+.sign-first-column {
+    @include abs.centerContainer(90%);
+    font-family: abs.$archivo;
+
+    &>h1 {
+        font-size: 32px;
+        font-weight: map-get(abs.$archivo-weight, extraBold);
+        margin-bottom: 1em;
+    }
+
+    .sign-form-container>p {
+        color: abs.$text-color;
+        margin-block: 1em 2.5em;
+
+        a {
+            color: abs.$sign-link-color;
+            cursor: pointer;
+            font-weight: map-get(abs.$archivo-weight, bold);
+            text-decoration: underline;
+            transition: all 350ms ease;
+
+            &:hover {
+                @include abs.textHover(abs.$sign-link-color, 'darken', 30%);
+            }
+        }
+    }
+
+    *::placeholder {
+        font-family: abs.$archivo;
+    }
+}
+
+.sign-second-column {
+    @include abs.flex(center, center, column);
+    background-color: abs.$testimony-bg-color;
+    height: 100%;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .sign-first-column {
+        &>h1 {
+            font-size: 35px;
+        }
+
+        .sign-form-container>p {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .sign-container {
+        @include abs.flex(space-between, stretch, row);
+    }
+
+    .sign-first-column {
+        flex: 2 1 55%;
+        position: relative;    
+
+        .sign-form-container {
+            @include abs.centerContainer(70%);
+            position: absolute;
+            transform: translate(50%, -50%);
+            top: 50%;
+            right: 50%;
+
+            & > p {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .sign-second-column {
+        flex: 1 2 45%;
+        padding: 10%;
+        min-height: 100vh;
+    }
+}

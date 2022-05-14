@@ -1,0 +1,58 @@
+@use '../../abstracts/'as abs;
+
+
+
+.testimony-container {
+    @include abs.centerContainer(90%);
+    font-family: abs.$archivo;
+    padding-block: 3em;
+
+
+    &>*:not(:first-child) {
+        margin-top: 1em;
+    }
+
+    q {
+        font-size: 18px;
+        font-weight: map-get(abs.$archivo-weight, extraBold);
+        line-height: 1.4;
+    }
+
+    .testimony-user-container {
+        @include abs.flex(flex-start, center, row, nowrap, .75em);
+
+        .testimony-user-img {
+            max-width: 100%;
+        }
+
+        .testimony-user-text-container {
+            font-size: 14px;
+
+            .testimony-user-name {
+                font-weight: map-get(abs.$archivo-weight, extraBold);
+            }
+
+            .testimony-profession {
+                color: abs.$text-color;
+                margin-top: 0.25em;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .testimony-container {
+        q {
+            font-size: 24px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .testimony-container {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        width: 50%;
+    }
+}

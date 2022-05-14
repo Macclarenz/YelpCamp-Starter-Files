@@ -1,0 +1,32 @@
+@use '../../abstracts/' as abs;
+
+.sign-header {
+    @include abs.flex(space-between, center, row);
+    @include abs.centerContainer(100%);
+    padding-block: 2.5em;
+
+    .sign-logo-link, 
+    .sign-back-to-campground-link {
+        cursor: pointer;
+    }
+
+    .sign-back-to-campground-link {
+        color: abs.$text-color;
+        position: relative;
+        
+        &::before {
+            @include abs.lineHover(currentColor);
+            transform-origin: right;
+        }
+
+        &:hover::before {
+            transform: scale(1);
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .sign-header {
+        width: 70%;
+    }
+}
